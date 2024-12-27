@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const baseDir = process.cwd();
 
 const program = new Command();
 
@@ -41,11 +42,11 @@ program
         ]);
         firstLevelDir = dirName;
 
-        const dirPath = path.join(__dirname, 'src', 'views', firstLevelDir);
+        const dirPath = path.join(baseDir, 'src', 'views', firstLevelDir);
         await fs.mkdir(dirPath, { recursive: true });
         console.log(`一级目录已创建：${dirPath}`);
       } else {
-        const files = await fs.readdir(path.join(__dirname, 'src', 'views'));
+        const files = await fs.readdir(path.join(baseDir, 'src', 'views'));
         const response = await inquirer.prompt([
           {
             type: 'list',
@@ -68,7 +69,7 @@ program
       ]);
 
 
-      let newFolderPath = path.join(__dirname, 'src', 'views', firstLevelDir);
+      let newFolderPath = path.join(baseDir, 'src', 'views', firstLevelDir);
       let secondLevelDirName = '';
 
       if (needSecondLevel) {
@@ -135,7 +136,7 @@ program
         const spinner = ora('正在创建 API 文件...').start();
 
         try {
-          let apiPath = path.join(__dirname, 'src', 'api');
+          let apiPath = path.join(baseDir, 'src', 'api');
 
           if (needFirstLevel && needSecondLevel) {
             apiPath = path.join(apiPath, firstLevelDir, secondLevelDirName);
