@@ -2,14 +2,22 @@
   "name": "lus-magic",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.ts",
+  "description": "A CLI tool for creating template files",
+  "main": "./dist/cli.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "pnpm run build && jest --detectOpenHandles"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "cli",
+    "template",
+    "generator"
+  ],
+  "author": "lus",
   "license": "ISC",
   "bin": {
     "lus-magic": "./dist/cli.js"
@@ -29,5 +37,13 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luszz/lus-magic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luszz/lus-magic/issues"
+  },
+  "homepage": "https://github.com/luszz/lus-magic#readme"
 }
