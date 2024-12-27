@@ -1,6 +1,6 @@
 {
   "name": "lus-magic",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A CLI tool for creating template files",
   "main": "./dist/cli.js",
