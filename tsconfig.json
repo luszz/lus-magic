@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext", 
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "moduleResolution": "node", 
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "undici-types": ["./node_modules/undici/types/index.d.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/__tests__/**/*"]
+}

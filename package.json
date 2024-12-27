@@ -1,0 +1,33 @@
+{
+  "name": "lus-magic",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "pnpm run build && jest --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "lus-magic": "./dist/cli.js"
+  },
+  "dependencies": {
+    "@types/ejs": "^3.1.5",
+    "commander": "^12.1.0",
+    "ejs": "^3.1.10",
+    "inquirer": "^12.3.0",
+    "ora": "^8.1.1",
+    "undici-types": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.2",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
